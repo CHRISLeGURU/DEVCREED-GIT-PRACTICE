@@ -1,0 +1,382 @@
+/* Variables CSS pour la palette de couleurs */
+:root {
+    --primary-dark: #1a1d29;
+    --secondary-dark: #2a2d3a;
+    --accent-pink: #ff3b8a;
+    --accent-purple: #9d4edd;
+    --accent-blue: #3b82f6;
+    --text-white: #ffffff;
+    --text-gray: #b8bcc8;
+    --gradient-primary: linear-gradient(135deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    --gradient-subtle: linear-gradient(135deg, rgba(255, 59, 138, 0.1), rgba(157, 78, 221, 0.1), rgba(59, 130, 246, 0.1));
+    --shadow-glow: 0 10px 40px rgba(255, 59, 138, 0.15);
+    --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 0 60px;
+    position: relative;
+}
+
+.gradient-line {
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    margin: 0 auto 30px;
+    max-width: 100px;
+    box-shadow: var(--shadow-glow);
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* Contenu principal */
+.main-content {
+    flex: 1;
+}
+
+/* Section profil étudiant complète */
+.student-profile {
+    display: grid;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Section profil */
+.profile-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 50px;
+    background: var(--secondary-dark);
+    border-radius: 20px;
+    box-shadow: var(--shadow-subtle);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-primary);
+}
+
+.photo-container {
+    position: relative;
+}
+
+.photo-placeholder {
+    width: 180px;
+    height: 180px;
+    background: var(--gradient-subtle);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: var(--gradient-primary);
+    border-radius: 23px;
+    z-index: -1;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 17px;
+}
+
+.student-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.student-role {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+/* Section présentation */
+.presentation-section {
+    padding: 40px;
+    background: var(--secondary-dark);
+    border-radius: 20px;
+    box-shadow: var(--shadow-subtle);
+    position: relative;
+    overflow: hidden;
+}
+
+.presentation-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-primary);
+}
+
+.presentation-section h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text-white);
+}
+
+.presentation-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+/* Container des compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Sections des compétences */
+.current-skills,
+.future-skills {
+    padding: 40px;
+    background: var(--secondary-dark);
+    border-radius: 20px;
+    box-shadow: var(--shadow-subtle);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+}
+
+.future-skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+}
+
+.current-skills:hover,
+.future-skills:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.current-skills h3,
+.future-skills h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text-white);
+}
+
+/* Listes des compétences */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.current-skills .skills-list li {
+    border-left-color: var(--accent-pink);
+    counter-increment: skill-counter;
+}
+
+.current-skills .skills-list li::before {
+    content: counter(skill-counter) ".";
+    font-weight: 700;
+    color: var(--accent-pink);
+    margin-right: 10px;
+}
+
+.current-skills .skills-list {
+    counter-reset: skill-counter;
+}
+
+.future-skills .skills-list li {
+    border-left-color: var(--accent-blue);
+}
+
+.future-skills .skills-list li::before {
+    content: "▸";
+    color: var(--accent-blue);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.skills-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 59, 138, 0.1);
+    transform: translateX(10px) translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.footer p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .profile-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+    
+    .photo-placeholder {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    .student-name {
+        font-size: 2rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .current-skills,
+    .future-skills,
+    .presentation-section {
+        padding: 25px 20px;
+    }
+    
+    .presentation-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .student-name {
+        font-size: 1.6rem;
+    }
+    
+    .student-role {
+        font-size: 1rem;
+    }
+    
+    .photo-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skills-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+}
