@@ -28,11 +28,11 @@ La section `student-profile` contient :
 - **Container compétences** : Compétences actuelles et futures
 
 #### Comment ajouter un nouvel étudiant
-1. Copier toute la section entre `<!-- PROFIL ÉTUDIANT -->` et `<!-- FIN PROFIL ÉTUDIANT -->`
+1. modifiez toute la section entre `<!-- PROFIL ÉTUDIANT -->` et `<!-- FIN PROFIL ÉTUDIANT -->`
 2. Changer l'ID (ex: `id="marie-martin-profile"`)
 3. Personnaliser :
    - Nom de l'étudiant
-   - URL de la photo
+   - URL de la photo ou image tiré du dossier public
    - Texte de présentation
    - Liste des compétences
 

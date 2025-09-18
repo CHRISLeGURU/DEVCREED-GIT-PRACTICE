@@ -5,7 +5,7 @@ Ce projet présente des profils d'étudiants de DEVCREED Academy avec un design 
 
 ## Structure des fichiers
 
-### 📄 index.html
+### index.html
 Fichier HTML principal contenant la structure de la page.
 
 #### Structure générale
