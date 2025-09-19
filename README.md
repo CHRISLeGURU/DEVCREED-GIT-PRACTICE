@@ -35,3 +35,6 @@ La section `student-profile` contient :
    - URL de la photo ou image tiré du dossier public
    - Texte de présentation
    - Liste des compétences
+
+### Profil ajouté
+- `Chuma Salman` a été ajouté et positionné en deuxième place après `Chris`, avec une image `public/salman.JPG`, une présentation mise à jour, et des listes de compétences actuelles et à développer.
